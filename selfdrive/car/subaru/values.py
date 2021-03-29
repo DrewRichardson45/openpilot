@@ -79,23 +79,29 @@ IGNORED_FINGERPRINTS = [CAR.IMPREZA, CAR.ASCENT, CAR.FORESTER_HYBRID]
 
 FW_VERSIONS = {
   CAR.ASCENT: {
-    # 2019 Ascent - UDM / @Adminiuga
+    # 2019 Ascent Limited -bitflux
     # Ecu, addr, subaddr: ROM ID
-    (Ecu.esp, 0x7b0, None): [
-      b'\xa5 \x19\x02\x00',
+    (Ecu.esp, 0x7B0, None): [
+      b'\xa5 \031\002\000',
     ],
     (Ecu.eps, 0x746, None): [
-      b'\x85\xc0\xd0\x00',
+      b'\x85\xc0\xd0\000',
+    ],
+    (Ecu.fwdCamera, 0x7C4, None): [
+      b'\xf1\000\xac\004\000',
     ],
     (Ecu.fwdCamera, 0x787, None): [
-      b'\x00\x00d\xb9\x1f@ \x10',
-    ],
-    (Ecu.engine, 0x7e0, None): [
+      b'\000\000d\xb9\037@ \020',
+    ],    
+    (Ecu.engine, 0x7E0, None): [
       b'\xbb,\xa0t\a',
     ],
-    (Ecu.transmission, 0x7e1, None): [
-      b'\x00\xfe\xf7\x00\x00',
+    (Ecu.transmission, 0x7E1, None): [
+      b'\000\xfe\xf7\000\000',
     ],
+    (Ecu.fwdRadar, 0x7D0, None): [
+      b'\xf1\000\000\000\002',
+    ],    
   },
   CAR.FORESTER_HYBRID: {
     # 2020 Forester Hybrid - UDM / @jaypray
